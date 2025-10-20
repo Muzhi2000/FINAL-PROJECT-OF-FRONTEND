@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FOODIE WEBSITE</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body >
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-warning fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-1" href="#">Foodie</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                 <li class="nav-item">
+        <a class="nav-link" href="#" id="loginBtn">Login</a>
+       </li>
+        </ul>
+         
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+
+  <section id="home" class="vh-100 d-flex align-items-center text-center text-white" style="background-image:url(images/food.jfif); background-size: cover;">
+    <div class="container">
+      <h1 class="display-3">Welcome to Foodie</h1>
+      <p class="lead">Delicious food. Great atmosphere.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">About Us</h2>
+      <p class="text-center">We are passionate about serving delicious meals with love. Our team is committed to quality, hospitality, and community.</p>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Menu</h2>
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+               <img src="images/images.jfif" alt="">
+              <h5 class="card-title">Pizza</h5>
+              <p class="card-text">Hot and cheesy with fresh toppings.</p>
+              <p>$10.99</p>
+              <button class="bg-warning">order now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <img src="images/burger.jfif" alt="">
+              <h5 class="card-title">Burger</h5>
+              <p class="card-text">Juicy beef patty with crispy fries.</p>
+              <p>$8.99</p>
+              <button class="bg-warning">order now</button>
+            </div>
+          </div>
+        </div>
+         <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <img src="images/salad.jfif" alt="">
+              <h5 class="card-title">Salad</h5>
+              <p class="card-text">Grilled chicken salad.</p>
+              <p>$5.99</p>
+              <button class="bg-warning">order now</button>
+            </div>
+          </div>
+        </div>
+         <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <img src="images/steak.jfif" alt="">
+              <h5 class="card-title">Steak</h5>
+              <p class="card-text">Grilled beaf steak with french fries and salad.</p>
+              <p>$11.99</p>
+              <button class="bg-warning">order now</button>
+            </div>
+          </div>
+        </div>
+         <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <img src="images/soup.jfif" alt="">
+              <h5 class="card-title">Soup</h5>
+              <p class="card-text">Vegetable soup.</p>
+              <p>$6.99</p>
+              <button class="bg-warning">order now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <img src="images/pasta.jfif" alt="">
+              <h5 class="card-title">Pasta</h5>
+              <p class="card-text">Rich creamy sauce with parmesan.</p>
+              <p>$9.99</p>
+              <button class="bg-warning">order now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Cart Section -->
+<!-- Cart Section -->
+<section id="cart" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Your Cart</h2>
+    <ul id="cartItems" class="list-group mb-3"></ul>
+    <div class="d-flex justify-content-between align-items-center">
+      <h4>Total: $<span id="cartTotal">0.00</span></h4>
+      <button id="clearCartBtn" class="btn btn-warning">Clear Cart</button>
+    </div>
+  </div>
+</section><br><br>
+
+
+
+
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <form id="contactForm" class="row g-3">
+      <div class="col-md-6">
+        <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+      </div>
+      <div class="col-md-6">
+        <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+      </div>
+      <div class="col-12">
+        <textarea id="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
+      </div>
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-warning">Send Message</button>
+      </div>
+    </form>
+
+    <!-- Feedback message should be inside the container -->
+    <div id="formFeedback" class="mt-3 text-center"></div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="bg-warning text-white text-center py-3">
+    <p class="mb-0">&copy; 2025 MySite. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="JS/script.js"></script>
+
+
+
+
+  <!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="loginForm">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" id="loginName" class="form-control mb-3" placeholder="Enter your name" required>
+          <input type="email" id="loginEmail" class="form-control" placeholder="Enter your email" required>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-warning">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+

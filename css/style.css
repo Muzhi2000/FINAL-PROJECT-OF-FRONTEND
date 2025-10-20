@@ -1,0 +1,32 @@
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  padding-top: 80px;
+}
+
+.nav-link {
+  cursor: pointer;
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  border-color: gold;
+  cursor: pointer;
+}
+#email:focus,
+#message:focus,
+#name:focus {
+  outline: none;
+  box-shadow:none;
+  border-color: goldenrod;
+}
+
+
+
+
